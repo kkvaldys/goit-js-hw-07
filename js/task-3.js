@@ -1,10 +1,6 @@
-const nameInput = document.getElementById('name-input');
-const nameOutput = document.getElementById('name-output');
-
-nameInput.addEventListener('input', updateName);
-
-function updateName() {
-    const inputText = nameInput.value.trim();
-
-    nameOutput.textContent = inputText || 'Anonymous';
-}
+const nameInput = document.querySelector("#name-input");
+const nameOutput = document.querySelector("#name-output");
+nameInput.addEventListener("input", () => {
+  const textName = nameInput.value.trim();
+  nameOutput.textContent = textName || "Anonymous";
+});
